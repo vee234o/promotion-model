@@ -8,8 +8,8 @@ st.set_page_config(page_title="Yakub Promotion AI", page_icon="⚖️")
 @st.cache_resource
 def load_data():
     try:
-        model = joblib.load('promotion_model.pkl')
-        encoder = joblib.load('promotion_encoder.pkl')
+        model = joblib.load('models/promotion_model.pkl')
+        encoder = joblib.load('models/promotion_encoder.pkl')
         return model, encoder
     except FileNotFoundError:
         return None, None
